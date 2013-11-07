@@ -1,0 +1,287 @@
+/*
+* Mobile First Skeleton
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+* Modified to be MOBILE FIRST by Adam Johnson: @adamj_design Fall 2012
+*/
+
+
+/* Table of Content
+==================================================
+	#Normalize.css
+	#Basic Styles, lots from the HTML5 Boilerplate - https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
+	#Skeleton Grid, Adapted to be Mobile First
+*/
+
+/* normalize.css v2.1.0 - http://github.com/necolas/normalize.css - 2-27-13 */
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type=button],/* 1 */ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}body,figure{margin:0}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+
+/* #Basic Styles */
+body { font-size: 1em; line-height: 1.4; }
+
+/* Remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
+img { vertical-align: middle; }
+
+/* Remove default fieldset styles. */
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Allow only vertical resizing of textareas. */
+textarea { resize: vertical; }
+
+ /* Fluid images and objects */
+img, iframe, object, embed { max-width: 100%; }
+
+
+/* Going MOBILE FIRST, Starting small with a base grid
+ * #Mobile - Portrait
+================================================== */
+
+	/* Note: Design for a width of 320px */
+
+.container { width: 300px; position: relative; margin: 0 auto; }
+.container .columns,
+.container .column { float: left; display: inline; }
+
+.row                          { margin-bottom: 20px; }
+
+.container .one.column,
+.container .one.columns,
+.container .two.columns,
+.container .three.columns,
+.container .four.columns,
+.container .five.columns,
+.container .six.columns,
+.container .seven.columns,
+.container .eight.columns,
+.container .nine.columns,
+.container .ten.columns,
+.container .eleven.columns,
+.container .twelve.columns,
+.container .thirteen.columns,
+.container .fourteen.columns,
+.container .fifteen.columns,
+.container .sixteen.columns,
+.container .one-third.column,
+.container .two-thirds.column  { width: 300px; padding-left:5px;}
+
+
+/* #Mobile - Landscape
+================================================== */
+
+	/* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 30em) {
+	.container { width: 420px; }
+
+	.container .one.column,
+	.container .one.columns,
+	.container .two.columns,
+	.container .three.columns,
+	.container .four.columns,
+	.container .five.columns,
+	.container .six.columns,
+	.container .seven.columns,
+	.container .eight.columns,
+	.container .nine.columns,
+	.container .ten.columns,
+	.container .eleven.columns,
+	.container .twelve.columns,
+	.container .thirteen.columns,
+	.container .fourteen.columns,
+	.container .fifteen.columns,
+	.container .sixteen.columns,
+	.container .one-third.column,
+	.container .two-thirds.column { width: 420px; }
+}
+
+/* #Setting up margins on the grid for everything greater than mobile landscape sizes.
+ * Zeroing out column margins with .alpha, and .omega
+==================================================  */
+
+@media only screen and (min-width: 47em) {
+	.container .column,
+	.container .columns             { margin-left: 10px; margin-right: 10px;  }
+	.column.alpha, .columns.alpha   { margin-left: 0; }
+	.column.omega, .columns.omega   { margin-right: 0; }
+	.column.alpha.omega, .columns.alpha.omega { margin-left: 0; margin-right: 0; }
+
+}
+
+/* #Tablet - Portrait
+================================================== */
+
+	/* Note: Design for a width of 752px */
+
+@media only screen and (min-width: 47em) {
+	.container                      { width: 752px; }
+
+	.container .one.column,
+	.container .one.columns         { width: 27px; }
+	.container .two.columns         { width: 74px; }
+	.container .three.columns       { width: 121px; }
+	.container .four.columns        { width: 168px; }
+	.container .five.columns        { width: 215px; }
+	.container .six.columns         { width: 262px; }
+	.container .seven.columns       { width: 309px; }
+	.container .eight.columns       { width: 356px; }
+	.container .nine.columns        { width: 403px; }
+	.container .ten.columns         { width: 450px; }
+	.container .eleven.columns      { width: 497px; }
+	.container .twelve.columns      { width: 544px; }
+	.container .thirteen.columns    { width: 591px; }
+	.container .fourteen.columns    { width: 638px; }
+	.container .fifteen.columns     { width: 685px; }
+	.container .sixteen.columns     { width: 732px; }
+
+	.container .one-third.column    { width: 230px; }
+	.container .two-thirds.column   { width: 480px; }
+
+	/* Offsets */
+	.container .offset-by-one       { padding-left: 47px; }
+	.container .offset-by-two       { padding-left: 94px; }
+	.container .offset-by-three     { padding-left: 141px; }
+	.container .offset-by-four      { padding-left: 188px; }
+	.container .offset-by-five      { padding-left: 235px; }
+	.container .offset-by-six       { padding-left: 282px; }
+	.container .offset-by-seven     { padding-left: 329px; }
+	.container .offset-by-eight     { padding-left: 376px; }
+	.container .offset-by-nine      { padding-left: 423px; }
+	.container .offset-by-ten       { padding-left: 470px; }
+	.container .offset-by-eleven    { padding-left: 517px; }
+	.container .offset-by-twelve    { padding-left: 564px; }
+	.container .offset-by-thirteen  { padding-left: 611px; }
+	.container .offset-by-fourteen  { padding-left: 658px; }
+	.container .offset-by-fifteen   { padding-left: 705px; }
+}
+/*
+@media only screen and (min-width: 48em) {
+	.container                      { width: 768px; }
+
+	.container .one.column,
+	.container .one.columns         { width: 28px; }
+	.container .two.columns         { width: 76px; }
+	.container .three.columns       { width: 124px; }
+	.container .four.columns        { width: 172px; }
+	.container .five.columns        { width: 220px; }
+	.container .six.columns         { width: 268px; }
+	.container .seven.columns       { width: 316px; }
+	.container .eight.columns       { width: 364px; }
+	.container .nine.columns        { width: 412px; }
+	.container .ten.columns         { width: 460px; }
+	.container .eleven.columns      { width: 508px; }
+	.container .twelve.columns      { width: 556px; }
+	.container .thirteen.columns    { width: 604px; }
+	.container .fourteen.columns    { width: 652px; }
+	.container .fifteen.columns     { width: 700px; }
+	.container .sixteen.columns     { width: 748px; }
+
+	.container .one-third.column    { width: 236px; }
+	.container .two-thirds.column   { width: 492px; }
+*/
+
+/* # 960 Grid - Desktop
+================================================== */
+
+	/* Note: Design for a width of 960px */
+
+@media only screen and (min-width: 60em) {
+
+	.container                     { width: 960px; }
+
+	/* Base Grid */
+	.container .one.column,
+	.container .one.columns        { width: 40px;  }
+	.container .two.columns        { width: 100px; }
+	.container .three.columns      { width: 160px; }
+	.container .four.columns       { width: 220px; }
+	.container .five.columns       { width: 280px; }
+	.container .six.columns        { width: 340px; }
+	.container .seven.columns      { width: 400px; }
+	.container .eight.columns      { width: 460px; }
+	.container .nine.columns       { width: 520px; }
+	.container .ten.columns        { width: 580px; }
+	.container .eleven.columns     { width: 640px; }
+	.container .twelve.columns     { width: 700px; }
+	.container .thirteen.columns   { width: 760px; }
+	.container .fourteen.columns   { width: 820px; }
+	.container .fifteen.columns    { width: 880px; }
+	.container .sixteen.columns    { width: 940px; }
+
+	.container .one-third.column   { width: 300px; }
+	.container .two-thirds.column  { width: 620px; }
+
+	/* Offsets */
+	.container .offset-by-one      { padding-left: 60px;  }
+	.container .offset-by-two      { padding-left: 120px; }
+	.container .offset-by-three    { padding-left: 180px; }
+	.container .offset-by-four     { padding-left: 240px; }
+	.container .offset-by-five     { padding-left: 300px; }
+	.container .offset-by-six      { padding-left: 360px; }
+	.container .offset-by-seven    { padding-left: 420px; }
+	.container .offset-by-eight    { padding-left: 480px; }
+	.container .offset-by-nine     { padding-left: 540px; }
+	.container .offset-by-ten      { padding-left: 600px; }
+	.container .offset-by-eleven   { padding-left: 660px; }
+	.container .offset-by-twelve   { padding-left: 720px; }
+	.container .offset-by-thirteen { padding-left: 780px; }
+	.container .offset-by-fourteen { padding-left: 840px; }
+	.container .offset-by-fifteen  { padding-left: 900px; }
+}
+
+/* Going BIG, we love the large screens - 1200px and up
+================================================== */
+	
+	/* Note: Design for a width of 1200px-> 68.750em (1100px) */
+
+@media only screen and (min-width: 75em)  {
+
+	.container                      { width: 1200px; }
+
+	.container .one.column          { width: 55px; }
+	.container .two.columns         { width: 130px; }
+	.container .three.columns       { width: 205px; }
+	.container .four.columns        { width: 280px; }
+	.container .five.columns        { width: 355px; }
+	.container .six.columns         { width: 430px; }
+	.container .seven.columns       { width: 505px; }
+	.container .eight.columns       { width: 580px; }
+	.container .nine.columns        { width: 655px; }
+	.container .ten.columns         { width: 730px; }
+	.container .eleven.columns      { width: 805px; }
+	.container .twelve.columns      { width: 880px; }
+	.container .thirteen.columns    { width: 955px; }
+	.container .fourteen.columns    { width: 1030px; }
+	.container .fifteen.columns     { width: 1105px; }
+	.container .sixteen.columns     { width: 1180px; }
+
+	.container .one-third.column    { width: 380px; }
+	.container .two-thirds.column   { width: 780px; }
+
+	/* Offsets */
+	.container .offset-by-one       { padding-left: 75px; }
+	.container .offset-by-two       { padding-left: 150px; }
+	.container .offset-by-three     { padding-left: 225px; }
+	.container .offset-by-four      { padding-left: 300px; }
+	.container .offset-by-five      { padding-left: 375px; }
+	.container .offset-by-six       { padding-left: 450px; }
+	.container .offset-by-seven     { padding-left: 525px; }
+	.container .offset-by-eight     { padding-left: 600px; }
+	.container .offset-by-nine      { padding-left: 675px; }
+	.container .offset-by-ten       { padding-left: 750px; }
+	.container .offset-by-eleven    { padding-left: 825px; }
+	.container .offset-by-twelve    { padding-left: 900px; }
+	.container .offset-by-thirteen  { padding-left: 975px; }
+	.container .offset-by-fourteen  { padding-left: 1050px; }
+	.container .offset-by-fifteen   { padding-left: 1125px; }
+}
+
+/* #Clearing
+================================================== */
+
+/* Self Clearing Goodness */
+.container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+/* You can also use a <br class="clear" /> to clear columns. Note that adding .clear to any tag will automatically hide it. */
+.clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
